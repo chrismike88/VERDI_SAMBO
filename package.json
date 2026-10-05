@@ -1,0 +1,13 @@
+{
+  "name": "verdi-sambo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VERDI SAMBO — dashboard verifikasi foto kWh meter prabayar ULP Samboja (AI di browser).",
+  "license": "UNLICENSED",
+  "scripts": {
+    "serve": "npx --yes http-server -p 8080 -c-1 .",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/rules.test.mjs",
+    "e2e": "node tests/e2e.mjs"
+  }
+}

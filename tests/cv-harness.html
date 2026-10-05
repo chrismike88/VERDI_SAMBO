@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><body>
+<script src="../assets/js/cv.js"></script><script src="../assets/js/demo.js"></script>
+<script>
+window.runAll = async function(){
+  const d = await VS.demo.buildDemo({month:9,year:2026});
+  const out=[];
+  for (const f of d.files){
+    const r = await VS.cv.processPhoto(f,{});
+    const m=f._demoOverlay||{};
+    out.push({file:f.name,variant:m.variant,stan:m.stan,read:r.stan&&r.stan.text,agree:r.stan&&r.stan.agree,conf:r.stan&&r.stan.conf,gate:r.gate1.codes.join('+'),sticker:r.sticker&&r.sticker.found,q:r.quality.sharpness+'/'+r.quality.brightness+'/'+r.quality.colorfulness+'/'+r.quality.gradient.ratio.toFixed(2), reads:r.stan?r.stan.reads.map(x=>x.text).join('|'):'' ,ms:r.durationMs});
+  }
+  return out;
+};
+</script>

@@ -89,4 +89,4 @@ npm run e2e     # alur penuh di Chromium (butuh paket playwright)
 
 ## Proyek lain di repo ini
 
-- [`borneo-culture-hub/`](borneo-culture-hub/) — landing page monitoring Program Budaya PLN 1·2·3 (Borneo Bersinar, Borneo Best, Borneo Prima) PLN UID Kaltimra.
+- [`borneo-culture-hub/`](borneo-culture-hub/) — landing page monitoring Program Budaya PLN 1·2·3 (Borneo Bersinar, Borneo Best, Borneo Prima) PLN UID Kaltimra. Versi siap buka (satu file, offline): [`borneo-culture-hub-offline.html`](borneo-culture-hub-offline.html).

@@ -10,7 +10,7 @@ npm run dev        # http://localhost:5173
 npm run validate   # cek file data
 npm run test       # uji angka PRD Lampiran A.10, status §8.4, insight R1–R7
 npm run build      # hasil statis di dist/
-npm run build:single  # satu file HTML di dist-single/ (cadangan offline)
+npm run build:single  # satu file HTML (gambar ikut tersemat) di dist-single/ — bisa dibuka dengan klik ganda
 ```
 
 ## Isi halaman

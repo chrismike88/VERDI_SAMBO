@@ -86,3 +86,7 @@ npm run e2e     # alur penuh di Chromium (butuh paket playwright)
 - Data batch tersimpan di browser (IndexedDB) pada perangkat tersebut. Sinkronisasi ke Google Sheets/Drive dan akses multi-verifikator (bagian 5–8 `PLAN.MD`) belum dibangun.
 - Ekspor menggunakan SheetJS Community, sehingga sel status tidak diberi warna. Filter otomatis dan lebar kolom tetap diatur.
 - Koordinat kantor ULP Samboja dan UP3 Balikpapan adalah perkiraan. Ubah nilainya di **Pengaturan → Kantor rujukan**.
+
+## Proyek lain di repo ini
+
+- [`borneo-culture-hub/`](borneo-culture-hub/) — landing page monitoring Program Budaya PLN 1·2·3 (Borneo Bersinar, Borneo Best, Borneo Prima) PLN UID Kaltimra. Versi siap buka (satu file, offline): [`borneo-culture-hub-offline.html`](borneo-culture-hub-offline.html).

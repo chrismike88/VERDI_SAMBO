@@ -140,9 +140,33 @@
     setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
   }
 
+  /* Simpan berkas: di dalam viewer Artifact claude.ai lewat kapabilitas
+     "downloads" (unduhan biasa diblokir di sana), selain itu lewat tautan unduh. */
+  var dlCap = null;
+  function saveFile(blob, name) {
+    if (window.claude && typeof window.claude.use === 'function') {
+      dlCap = dlCap || window.claude.use('downloads').catch(function () { return null; });
+      return dlCap.then(function (d) {
+        if (!d) { download(blob, name); return 'saved'; }
+        return d.save({ filename: name, data: blob }).then(function (r) { return r.status; }, function (e) {
+          if (e && e.code === 'declined') { toast('Unduhan dibatalkan.', 'info'); return 'declined'; }
+          toast('Berkas tidak dapat disimpan di tampilan ini (' + (e && e.code || 'galat') + ').', 'error', 5000);
+          return 'error';
+        });
+      });
+    }
+    download(blob, name);
+    return Promise.resolve('saved');
+  }
+
+  function saveWorkbook(wb, name) {
+    var out = XLSX.write(wb, { type: 'array', bookType: 'xlsx' });
+    return saveFile(new Blob([out], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }), name);
+  }
+
   VS.util = {
     esc: esc, uid: uid, pad: pad, fmtNum: fmtNum, pct: pct, fmtTime: fmtTime, fmtDateTime: fmtDateTime, fmtLongDate: fmtLongDate,
     haversine: haversine, debounce: debounce, similarity: similarity, parseStampDate: parseStampDate,
-    store: store, toast: toast, download: download, BULAN: BULAN, BULAN_SINGKAT: BULAN_SINGKAT
+    store: store, toast: toast, download: download, saveFile: saveFile, saveWorkbook: saveWorkbook, BULAN: BULAN, BULAN_SINGKAT: BULAN_SINGKAT
   };
 })();

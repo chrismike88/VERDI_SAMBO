@@ -184,7 +184,7 @@
     XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(au), 'Riwayat');
     wb.Props = { Title: 'VERDI SAMBO ' + U.BULAN[b.month - 1] + ' ' + b.year, Author: S.settings.verifikator, CreatedDate: new Date() };
     var name = 'VERDI_SAMBO_' + b.year + U.pad(b.month) + (suffix ? '_' + suffix : '') + '.xlsx';
-    XLSX.writeFile(wb, name);
+    U.saveWorkbook(wb, name);
     return name;
   }
 
@@ -193,7 +193,7 @@
       ['232100000425', 'CONTOH PELANGGAN', '45123456789', 4699, 'RT 05 Kel. Margomulyo, Samboja', 'Margomulyo', 'SMB-01', 'SMB', -1.0368, 117.1182]];
     var wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(aoa), 'Master');
-    XLSX.writeFile(wb, 'Template_Master_VERDI_SAMBO.xlsx');
+    U.saveWorkbook(wb, 'Template_Master_VERDI_SAMBO.xlsx');
   }
 
   function demoWorkbookFile(rows) {

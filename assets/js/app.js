@@ -367,7 +367,7 @@
     'load-pair': loadAndPair,
     'dl-bad': function () {
       var aoa = [['Baris', 'IDPEL', 'Nama', 'Masalah']].concat(setup.built.bad.map(function (b) { return [b.baris, b.idpel, b.nama, b.masalah]; }));
-      var wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(aoa), 'Bermasalah'); XLSX.writeFile(wb, 'baris_bermasalah.xlsx');
+      var wb = XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(aoa), 'Bermasalah'); U.saveWorkbook(wb, 'baris_bermasalah.xlsx');
     },
     'run-all': function () { if (S.ui.view !== 'process') nav('process'); runScope('all'); },
     'run-page': function () { runScope('page'); },
@@ -415,7 +415,10 @@
     uncheck: function () { S.ui.checked = {}; refreshChecks(); },
     export: function () { exportAll(false); },
     'export-selected': function () { exportAll(true); },
-    print: function () { window.print(); },
+    print: function () {
+      if (window.claude) { U.toast('Cetak tidak tersedia di tampilan ini. Ekspor Excel lalu cetak dari Excel.', 'info', 5000); return; }
+      window.print();
+    },
     'open-batch': function (el) {
       var id = el.getAttribute('data-id');
       ST.loadBatch(id).then(function (ok) {

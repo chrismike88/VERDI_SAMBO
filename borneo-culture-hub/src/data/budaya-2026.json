@@ -1,0 +1,311 @@
+{
+  "meta": {
+    "title": "BORNEO Culture Hub",
+    "year": 2026,
+    "dataAsOf": "2026-09-30",
+    "updatedAt": "2026-10-15",
+    "disusunOleh": "Ranger Champion PLN UID Kaltimra",
+    "rangerMaster": "Muchamad Chaliq Fadli",
+    "unit": "PLN UID Kalimantan Timur & Kalimantan Utara",
+    "sources": [
+      "Lembar Pencapaian Program Budaya 2026 (Balikpapan, 15 Oktober 2026)",
+      "Paparan CO HUB 3 PLN UID Kaltimra"
+    ],
+    "nodes": ["Balikpapan", "Samarinda", "Bontang", "Berau", "Kaltara", "Nusantara"]
+  },
+  "periods": [
+    { "id": "2026-06", "label": "CO HUB 1 · Juni 2026", "short": "Jun", "chip": "CO HUB 1 · Jun", "month": 6, "cohub": 1, "isPrognosa": false },
+    { "id": "2026-07", "label": "CO HUB 2 · Juli 2026", "short": "Jul", "chip": "CO HUB 2 · Jul", "month": 7, "cohub": 2, "isPrognosa": false },
+    { "id": "2026-08", "label": "Agustus 2026", "short": "Agu", "chip": "Agu", "month": 8, "isPrognosa": false },
+    { "id": "2026-09", "label": "CO HUB 3 · September 2026", "short": "Sep", "chip": "CO HUB 3 · Sep", "month": 9, "cohub": 3, "isPrognosa": false },
+    { "id": "2026-12P", "label": "Prognosa Desember 2026", "short": "Des (P)", "chip": "Prognosa Des", "month": 12, "isPrognosa": true }
+  ],
+  "heroStats": [
+    { "label": "Fatality", "pillarId": "bersinar", "indicatorId": "kasus" },
+    { "label": "Temuan Ditutup", "pillarId": "bersinar", "indicatorId": "closing" },
+    { "label": "Transaksi PLN Mobile", "pillarId": "best", "indicatorId": "trx_kali" },
+    { "label": "Penjualan Energi", "pillarId": "prima", "indicatorId": "penjualan" }
+  ],
+  "pillars": [
+    {
+      "id": "bersinar",
+      "code": "PLN 1",
+      "name": "Borneo Bersinar",
+      "focus": "Beyond Safety",
+      "tagline": "Bersama Peduli Keselamatan Ketenagalistrikan",
+      "cover": "assets/pillars/cover-bersinar.webp",
+      "dnaValues": ["Disiplin", "Tanpa Kompromi", "Peduli"],
+      "businessTarget": "Zero Accident",
+      "ultimateTarget": "Zero Harm Zero Loss",
+      "selfReportedProgress": "100% On Track",
+      "keyIndicatorIds": ["closing", "apd"],
+      "closingLine": "Budaya Keselamatan dimulai dari saya.",
+      "closingSub": "Paham · Peduli · Bertindak · Mengingatkan",
+      "kpiFokus": [
+        { "label": "Zero Fatality", "targetLabel": "0 fatality", "value": 0, "source": "Lembar Pencapaian 15 Okt 2026" },
+        { "label": "Penurunan LTIF", "targetLabel": "100%", "value": 100, "source": "Lembar Pencapaian 15 Okt 2026" }
+      ],
+      "programs": [
+        { "id": "safety-briefing", "name": "Safety Briefing", "description": "Briefing risiko dan pengendaliannya sebelum bekerja.", "indicatorIds": ["apd"] },
+        { "id": "walk-down", "name": "Walk Down Care for Asset & Care for Safety", "description": "Menemukan dan menutup unsafe action/condition di lapangan.", "indicatorIds": ["closing"] },
+        { "id": "ccv", "name": "CCV", "description": "Critical Control Verification sebelum pekerjaan berisiko.", "indicatorIds": ["lti"] },
+        { "id": "inspekta", "name": "Aplikasi Inspekta", "description": "Inspeksi dan verifikasi lapangan secara digital.", "indicatorIds": ["closing"] },
+        { "id": "hsse-cc", "name": "HSSE Control Center", "description": "Pemantauan WO, BWC/CCTV, dan temuan K3 per UP3.", "indicatorIds": ["kasus"] },
+        { "id": "bersinar-masyarakat", "name": "Safety untuk Masyarakat (Bersinar)", "description": "Edukasi keselamatan ketenagalistrikan untuk masyarakat.", "indicatorIds": ["kasus"] }
+      ],
+      "indicators": [
+        { "id": "kasus", "label": "Penambahan kasus", "unit": "kasus", "type": "zero", "target": 0, "targetLabel": "0 kasus", "values": { "2026-06": 0, "2026-07": 0, "2026-08": 0, "2026-09": 0, "2026-12P": 0 }, "programIds": ["hsse-cc"], "source": "Lembar Pencapaian 15 Okt 2026" },
+        { "id": "lti", "label": "Temuan penyebab LTI", "unit": "temuan", "type": "zero", "target": 0, "targetLabel": "0 temuan", "values": { "2026-06": 0, "2026-07": 0, "2026-08": 0, "2026-09": 0, "2026-12P": 0 }, "programIds": ["ccv"], "source": "Lembar Pencapaian 15 Okt 2026" },
+        { "id": "closing", "label": "Tindak lanjut temuan (closed)", "unit": "temuan", "type": "cumulative", "target": 14235, "targetLabel": "14.235 temuan", "values": { "2026-06": 7339, "2026-07": 8435, "2026-08": 9396, "2026-09": 10770, "2026-12P": 14235 }, "programIds": ["walk-down", "inspekta"], "source": "Lembar Pencapaian 15 Okt 2026 · Slide Walk Down" },
+        { "id": "apd", "label": "Kepatuhan APD & SOP", "unit": "%", "type": "min", "target": 100, "targetLabel": "100%", "values": { "2026-06": 100, "2026-07": 100, "2026-08": 100, "2026-09": 100, "2026-12P": 100 }, "programIds": ["safety-briefing"], "source": "Lembar Pencapaian 15 Okt 2026" }
+      ],
+      "monthlySeries": [
+        {
+          "id": "walkdown",
+          "label": "Walk Down Care for Asset & Care for Safety",
+          "unit": "temuan",
+          "actual": { "Jan": 1417, "Feb": 1299, "Mar": 993, "Apr": 1403, "Mei": 1072, "Jun": 1155, "Jul": 1096, "Agu": 961, "Sep": 1374 },
+          "forecastTotal": 3465,
+          "forecastMonths": ["Okt", "Nov", "Des"]
+        }
+      ],
+      "rituals": [
+        { "id": "before", "phase": "Before Work", "ritual": "Safety Briefing + JSA + CCV", "activities": ["Sampaikan risiko & pengendaliannya", "Identifikasi bahaya", "Pastikan pengendalian siap sebelum bekerja"], "impact": "Petugas memahami risiko dan konsekuensi; pengendalian disiapkan sebelum pekerjaan dimulai.", "evidenceIds": ["ev-safety-briefing"] },
+        { "id": "during", "phase": "During Work", "ritual": "Supervision + CCTV/BWC + Monitoring", "activities": ["Pengawasan aktif di lapangan", "Pantau kepatuhan & kondisi pekerjaan", "Tindak segera jika ada penyimpangan"], "impact": "Penyimpangan terdeteksi lebih dini; pekerjaan bisa langsung dihentikan saat tidak aman dan dikoreksi segera.", "evidenceIds": ["ev-cctv-bwc"] },
+        { "id": "after", "phase": "After Work", "ritual": "Evaluation + Inspekta + Closing", "activities": ["Evaluasi hasil pekerjaan", "Inspeksi & verifikasi lapangan", "Tutup pekerjaan dengan aman"], "impact": "Temuan ditutup dan tidak berulang.", "evidenceIds": ["ev-inspekta"] },
+        { "id": "weekly", "phase": "Weekly", "ritual": "Safety Briefing & Review", "activities": ["Review kinerja K3", "Sharing temuan & pembelajaran", "Perkuat komitmen & perbaikan"], "impact": "Tren kinerja dibahas; hambatan dan temuan berulang mendapat tindakan.", "evidenceIds": ["ev-weekly-review"] },
+        { "id": "monthly", "phase": "Monthly", "ritual": "Gelar APD & Alker + Management Inspection", "activities": ["Cek kelengkapan APD & Alker", "Management inspection di lapangan", "Evaluasi sistem & kepatuhan"], "impact": "Kualitas APD, alat kerja, kepatuhan, dan kebutuhan perbaikan ditinjau berkala.", "evidenceIds": ["ev-gelar-apd"] },
+        { "id": "continuous", "phase": "Continuous", "ritual": "Safety Quotes + Edukasi + Life Saving Rules", "activities": ["Sampaikan pesan keselamatan setiap hari", "Edukasi berkelanjutan", "Terapkan Life Saving Rules tanpa kompromi"], "impact": "Pesan keselamatan terus hadir; petugas memahami bahaya, kontrol, dan konsekuensi jika kontrol tidak dijalankan.", "evidenceIds": ["ev-safety-quotes"] }
+      ],
+      "ritualTagline": "Menjadikan keselamatan sebagai kebiasaan sehari-hari untuk mencapai ZERO HARM ZERO LOSS",
+      "ritualTaglineSub": "Mencegah kecelakaan · Meningkatkan kepatuhan · Meningkatkan kinerja · Melindungi pekerja, aset, dan masyarakat",
+      "behaviourChange": { "from": "Sudah briefing.", "to": "Saya memahami bahaya, kontrol dan konsekuensi jika kontrol tidak dijalankan." },
+      "leaderBehavior": [
+        { "step": "Perencanaan", "description": "Menyusun rencana aksi: safety briefing manajemen, Sidak Manajemen, dan Safety Quote.", "evidenceIds": ["ev-sidak"] },
+        { "step": "Pelaksanaan", "description": "Implementasi safety briefing manajemen, Sidak Manajemen, dan Safety Quote.", "evidenceIds": ["ev-safety-briefing"] },
+        { "step": "Monitoring", "description": "Monitoring harian sidak, temuan, rencana kerja, dan safety briefing harian ULP.", "evidenceIds": ["ev-cctv-bwc"] },
+        { "step": "Evaluasi", "description": "Evaluasi pelaksanaan program dan tindak lanjut temuan.", "evidenceIds": ["ev-weekly-review"] }
+      ],
+      "leaderClosing": "Ranger Master & Ranger Leader hadir di lapangan: memberi teladan, mengawasi, dan mengevaluasi.",
+      "cultureDna": [
+        { "id": "disiplin", "name": "Disiplin", "definition": "Konsisten menjalankan aturan dan tanggung jawab", "scores": { "2026-08": 4.67, "2026-09": 4.84 }, "behaviors": ["Mematuhi seluruh SOP kerja tanpa diingatkan", "Menggunakan APD sesuai standar", "Datang tepat waktu pada briefing/toolbox meeting", "Melaksanakan Take-5/JSA sebelum bekerja", "Menjaga kerapihan area kerja setelah pekerjaan selesai"] },
+        { "id": "tanpa-kompromi", "name": "Tanpa Kompromi", "definition": "Menjaga standar keselamatan di setiap kondisi", "scores": { "2026-08": 4.70, "2026-09": 4.86 }, "behaviors": ["Menghentikan pekerjaan apabila kondisi tidak aman", "Menolak melakukan pekerjaan yang melanggar SOP", "Berani mengingatkan rekan yang bekerja tidak aman", "Melaporkan Unsafe Action/Unsafe Condition", "Tidak mentoleransi pelanggaran K3"] },
+        { "id": "peduli", "name": "Peduli", "definition": "Aktif menjaga keselamatan diri dan rekan kerja", "scores": { "2026-08": 4.77, "2026-09": 4.83 }, "behaviors": ["Membantu rekan menjaga keselamatan kerja", "Mengingatkan penggunaan APD kepada rekan", "Aktif mengikuti safety briefing", "Memberikan saran perbaikan aspek keselamatan", "Menjadi contoh perilaku aman di tempat kerja"] }
+      ],
+      "systems": [
+        { "id": "hsse-cc", "name": "Dashboard HSSE CC", "description": "Monitoring Work Order, status BWC/CCTV, dan temuan K3 per UP3.", "metrics": [{ "label": "Cakupan", "value": "6 UP3" }, { "label": "Pantauan", "value": "WO · BWC · CCTV" }], "access": "intranet" },
+        { "id": "laporan-hsse", "name": "Laporan Harian Kinerja HSSE", "description": "Kecelakaan, maturity level K3 & keamanan, temuan inspeksi Inspekta, pemenuhan SOP.", "metrics": [{ "label": "Frekuensi", "value": "Harian" }, { "label": "Edisi terbaru", "value": "14 Okt 2026" }], "access": "intranet" }
+      ],
+      "symbols": [
+        { "program": "ETAM (Edukasi dan Teladan untuk Aksi Menjaga keselamatan)", "ritual": "Internalisasi / Ritual & Komunikasi", "frequency": "Harian via pesan WhatsApp & pesan suara Walkiefleet HSSE Control Center", "evidence": "WA Group, Story WA, video pesan keselamatan HSSE CC", "rewardConsequence": ["Publikasi"], "impact": "Pegawai & petugas lebih mudah memahami risiko, peduli keselamatan, saling mengingatkan, dan menerapkan kerja aman secara konsisten", "governance": ["Surat GM No. 1429/KLH.01.01/F140000/2026 tentang Himbauan Safety Quote"] },
+        { "program": "Reward & Konsekuensi", "ritual": "Reward and Consequences", "frequency": "Bulanan & semester", "evidence": "Penetapan reward & konsekuensi di unit induk & unit pelaksana", "rewardConsequence": ["Apresiasi/reward Inspekta Champion", "Sanksi/konsekuensi dengan SLA/denda pada tagihan untuk ketidaksesuaian implementasi"], "impact": "Mencegah kecelakaan berulang, meningkatkan disiplin, membentuk identitas budaya K3 yang peduli dan patuh", "governance": ["Penetapan Reward Program K3L Tahun 2026"] }
+      ],
+      "highlights": [
+        { "title": "Zero Fatality", "subtitle": "0 fatality", "points": ["Tidak ada penambahan s.d. September 2026"] },
+        { "title": "LTIF", "subtitle": "Tidak ada penambahan", "points": ["Menurun / tidak ada penambahan"] },
+        { "title": "Closing Temuan", "subtitle": "10.770 temuan", "points": ["Unsafe action/condition ditindaklanjuti s.d. September 2026"] },
+        { "title": "Disiplin SOP & APD", "subtitle": "100% kepatuhan", "points": ["Konsisten s.d. September 2026"] }
+      ],
+      "sidakImpact": [
+        { "title": "Risiko terkendali", "points": ["Bahaya kritis teridentifikasi & diamankan lebih cepat"] },
+        { "title": "Kepatuhan meningkat", "points": ["Disiplin SOP, APD, izin kerja, metode kerja aman"] },
+        { "title": "Temuan berulang turun", "points": ["Akar penyebab diperbaiki"] },
+        { "title": "Cegah kecelakaan", "points": ["Mengurangi peluang insiden, cedera, gangguan operasi"] }
+      ]
+    },
+    {
+      "id": "best",
+      "code": "PLN 2",
+      "name": "Borneo Best",
+      "focus": "Beyond Service",
+      "tagline": "Beyond Expectations, Serving Together",
+      "taglineSub": "One Team. Five Actions. Happy Customers.",
+      "cover": "assets/pillars/cover-best.webp",
+      "dnaValues": ["Empati", "Proaktif", "Solutif"],
+      "businessTarget": "IKP ≥ 99,50%",
+      "ultimateTarget": "Kepuasan Pelanggan",
+      "selfReportedProgress": "5 Program On Track",
+      "keyIndicatorIds": ["trx_kali", "feedback"],
+      "closingLine": "Lima Pilar Terintegrasi. Pelayanan Terus Diperbaiki.",
+      "closingSub": "Pemimpin menjadi teladan. Tim bergerak bersama. Pelanggan merasakan manfaat.",
+      "kpiFokus": [
+        { "label": "Indeks Kepuasan Pelanggan", "targetLabel": "≥ 99,50%", "value": null, "source": "Lembar Pencapaian 15 Okt 2026" },
+        { "label": "Susut distribusi (tanpa Emin)", "targetLabel": "6,15%", "value": null, "source": "Lembar Pencapaian 15 Okt 2026" },
+        { "label": "Penggambaran aset distribusi", "targetLabel": "Berbasis ArcGIS", "source": "Slide Business Focus Alignment" }
+      ],
+      "programs": [
+        { "id": "vape-gadis", "name": "VAPE GADIS", "action": "Lindungi Data Pelanggan", "description": "Validasi data pelanggan per gardu.", "indicatorIds": ["vape_gadis"] },
+        { "id": "goes-to-public", "name": "Goes to Public", "action": "Dekati Pelanggan", "description": "Kunjungan, sosialisasi & pencatatan CRM.", "indicatorIds": ["trx_kali", "trx_rp"] },
+        { "id": "tok-tok-wow", "name": "Tok Tok Wow", "action": "Dengarkan Keluhan", "description": "Catat feedback, profil & riwayat pelanggan.", "indicatorIds": ["feedback"] },
+        { "id": "akademi-yantek", "name": "Akademi Yantek", "action": "Siapkan Petugas Gercep", "description": "Perkuat kompetensi, K3 & kesiapan layanan.", "indicatorIds": ["gangguan_berulang"] },
+        { "id": "checkpoint", "name": "Checkpoint Distribusi & Niaga", "action": "Jaga Keandalan Listrik", "description": "Evaluasi jaringan & koordinasikan tindak lanjut.", "indicatorIds": ["gangguan_penyulang"] }
+      ],
+      "indicators": [
+        { "id": "trx_kali", "label": "Jumlah kali transaksi PLN Mobile", "unit": "ribu kali", "type": "cumulative", "target": 651.76, "targetLabel": "651,76 rb kali", "decimals": 2, "values": { "2026-06": 530.47, "2026-07": 678.83, "2026-08": 865.46, "2026-09": 989.68, "2026-12P": 1270.93 }, "programIds": ["goes-to-public"], "source": "Lembar Pencapaian 15 Okt 2026", "note": "Slide BEST menyebut 209,8% target YTD (angka laporan); status memakai target tahunan." },
+        { "id": "trx_rp", "label": "Rupiah transaksi PLN Mobile", "unit": "Rp miliar", "type": "cumulative", "target": 278.37, "targetLabel": "Rp278,37 M", "decimals": 2, "values": { "2026-06": 165.42, "2026-07": 200.91, "2026-08": 240.84, "2026-09": 279.01, "2026-12P": 361.88 }, "programIds": ["goes-to-public"], "source": "Lembar Pencapaian 15 Okt 2026" },
+        { "id": "feedback", "label": "Feedback rating negatif", "unit": "%", "type": "max", "target": 0.03, "targetLabel": "≤ 0,03%", "decimals": 3, "values": { "2026-06": 0.116, "2026-07": 0.011, "2026-08": 0.013, "2026-09": 0.013, "2026-12P": 0.013 }, "programIds": ["tok-tok-wow"], "source": "Lembar Pencapaian 15 Okt 2026", "note": "Slide BEST menyebut capaian 173,38% (angka laporan, rumus tidak tercantum)." },
+        { "id": "gangguan_berulang", "label": "Penurunan pengaduan gangguan berulang", "unit": "%", "type": "min", "target": 5, "targetLabel": "≥ 5%", "values": { "2026-06": 15, "2026-07": 20, "2026-08": 20, "2026-09": 25, "2026-12P": 25 }, "programIds": ["akademi-yantek"], "source": "Lembar Pencapaian 15 Okt 2026", "note": "Di lembar pencapaian satu baris 'Penurunan gangguan' dipakai untuk Akademi Yantek dan Checkpoint (dikonfirmasi)." },
+        { "id": "gangguan_penyulang", "label": "Penurunan gangguan penyulang", "unit": "%", "type": "min", "target": 5, "targetLabel": "≥ 5%", "values": { "2026-06": 15, "2026-07": 20, "2026-08": 20, "2026-09": 25, "2026-12P": 25 }, "programIds": ["checkpoint"], "source": "Lembar Pencapaian 15 Okt 2026", "note": "Nilai sama dengan baris gangguan berulang (dikonfirmasi apakah identik)." },
+        { "id": "vape_gadis", "label": "Validasi data pelanggan (tergambar & terpetakan)", "unit": "%", "type": "min", "target": 95, "targetLabel": "95%", "approx": true, "values": { "2026-06": 85, "2026-07": 87, "2026-08": 90, "2026-09": 93, "2026-12P": 95 }, "programIds": ["vape-gadis"], "source": "Slide Business Focus Alignment", "note": "Berbeda dari metrik PDL valid 83,84% (1.468.159 pelanggan) di slide BEST — definisi dikonfirmasi." }
+      ],
+      "comparisons": [
+        { "label": "Gangguan Jan–Sep", "before": 5972, "after": 4459, "beforeLabel": "2025", "afterLabel": "2026", "unit": "gangguan" },
+        { "label": "Rata-rata Apr–Sep", "before": 732, "after": 247, "beforeLabel": "2025", "afterLabel": "2026", "unit": "per bulan" },
+        { "label": "September", "before": 862, "after": 214, "beforeLabel": "2025", "afterLabel": "2026", "unit": "gangguan" }
+      ],
+      "rituals": [],
+      "leaderBehavior": [
+        { "step": "Perencanaan", "description": "Merancang strategi, menetapkan target, dan menyusun rencana aksi budaya yang terukur.", "evidenceIds": ["ev-fgd-distribusi", "ev-koordinasi-distribusi"] },
+        { "step": "Pelaksanaan", "description": "Menggerakkan tim dan memastikan program budaya berjalan sesuai rencana.", "evidenceIds": ["ev-light-up", "ev-ev-bike"] },
+        { "step": "Monitoring", "description": "Memantau progres, memastikan kepatuhan, dan mendampingi tim.", "evidenceIds": ["ev-coc-vape"] },
+        { "step": "Evaluasi", "description": "Mengevaluasi hasil, menemukan peluang perbaikan, dan menindaklanjuti secara berkelanjutan.", "evidenceIds": ["ev-kampus-yantek"] }
+      ],
+      "leaderClosing": "Ranger Leader & Ranger Master hadir dan berperan aktif di setiap tahap — Konsisten · Kolaboratif · Berdampak · Berkelanjutan.",
+      "cultureDna": [
+        { "id": "empati", "name": "Empati", "definition": "Memahami dan melayani pelanggan dengan lebih baik", "scores": { "2026-08": 4.71, "2026-09": 4.84 }, "behaviors": ["Menyapa pelanggan dengan ramah dan sopan", "Mendengarkan kebutuhan pelanggan tanpa memotong pembicaraan", "Menggunakan bahasa yang mudah dipahami", "Menunjukkan kepedulian terhadap kondisi pelanggan", "Mengakhiri pelayanan dengan memastikan pelanggan memahami solusi"] },
+        { "id": "proaktif", "name": "Proaktif", "definition": "Bergerak lebih awal dan mengantisipasi kebutuhan pelanggan", "scores": { "2026-08": 4.56, "2026-09": 4.71 }, "behaviors": ["Memberikan informasi sebelum pelanggan bertanya", "Menginformasikan progres pekerjaan secara berkala", "Menawarkan bantuan tambahan kepada pelanggan", "Mengedukasi pelanggan mengenai PLN Mobile atau layanan digital", "Mengidentifikasi potensi masalah sebelum menjadi keluhan"] },
+        { "id": "solutif", "name": "Solutif", "definition": "Memberikan solusi terbaik untuk kebutuhan pelanggan", "scores": { "2026-08": 4.60, "2026-09": 4.74 }, "behaviors": ["Memberikan solusi yang sesuai kebutuhan pelanggan", "Memberikan alternatif solusi apabila terdapat kendala", "Melakukan koordinasi lintas fungsi tanpa membebani pelanggan", "Melakukan follow up hingga pekerjaan selesai", "Memastikan pelanggan puas terhadap penyelesaian masalah"] }
+      ],
+      "systems": [
+        { "id": "ohsd", "name": "Dashboard Kinerja OHSD", "description": "Kinerja bidang OHSD: response time, SAIDI, SAIFI.", "metrics": [{ "label": "Response time", "value": "24,18 menit" }, { "label": "SAIDI · SAIFI", "value": "108,70% · 105,88%" }], "access": "intranet" },
+        { "id": "pln-mobile", "name": "Dashboard Transaksi PLN Mobile", "description": "Transaksi kali dan rupiah PLN Mobile per unit.", "metrics": [{ "label": "Transaksi Jan–Sep", "value": "989.684 kali" }, { "label": "Rupiah", "value": "Rp279,0 M" }], "access": "intranet" },
+        { "id": "gangguan", "name": "Grafik Gangguan Penyulang 2025 vs 2026", "description": "Perbandingan gangguan penyulang bulanan.", "metrics": [{ "label": "Jan–Sep", "value": "5.972 → 4.459" }, { "label": "Perubahan", "value": "−25,3%" }], "access": "intranet" },
+        { "id": "jtm", "name": "Dashboard JTM & JTM SR App", "description": "Pelanggan & aset terdata dan terpetakan.", "metrics": [{ "label": "PDL valid", "value": "1.468.159" }, { "label": "Persentase", "value": "83,84%" }], "access": "intranet" }
+      ],
+      "symbols": [
+        { "program": "VAPE GADIS", "ritual": "COC VAPE GADIS & validasi data pelanggan per gardu", "frequency": "Evaluasi rutin", "evidence": "COC VAPE GADIS · Dashboard Distribusi", "rewardConsequence": ["Apresiasi UP3 dengan PDL valid tertinggi", "UP3 terendah wajib rencana percepatan"], "impact": "PDL valid naik 32,02% → 83,84%; titik koordinat akurat, yantek lebih cepat tiba", "governance": ["Data AP2T dipantau di Dashboard Distribusi & ArcGIS", "Progres 6 UP3 dibahas di COC"] },
+        { "program": "Goes to Public", "ritual": "Guerilla marketing & touring EV bersama komunitas", "frequency": "Aktivasi berkelanjutan", "evidence": "Touring EV bersama komunitas EV Bike Balikpapan", "rewardConsequence": ["Apresiasi unit transaksi tertinggi", "Capaian di bawah target dievaluasi bulanan"], "impact": "Transaksi PLN Mobile 989.684 kali (209,8% target YTD), +145% YoY; pelanggan makin digital", "governance": ["Target kali & rupiah dimonitor bulanan", "Kolaborasi komunitas EV"] },
+        { "program": "Tok Tok Wow", "ritual": "Sapa pelanggan, customer journey & catat feedback", "frequency": "Review bulanan", "evidence": "Marketing Award per 3 bulan", "rewardConsequence": ["Apresiasi petugas dengan feedback positif", "Keluhan berulang wajib ditindaklanjuti"], "impact": "Feedback negatif 0,013% (< 0,03%); keluhan & profil pelanggan terpetakan", "governance": ["Feedback & riwayat tercatat di CRM", "Tindak lanjut lintas fungsi"] },
+        { "program": "Akademi Yantek", "ritual": "Kampus Yantek: refreshment kompetensi & K3", "frequency": "Triwulan & semester", "evidence": "Kampus Yantek Batch 4 · UP3 Berau", "rewardConsequence": ["Apresiasi yantek & posko terbaik", "Pelanggaran K3 diberi konsekuensi sesuai prosedur"], "impact": "Response time 24,18 menit (118,63%); kompetensi & budaya K3 yantek menguat", "governance": ["Digelar bersama UP3", "Materi selaras K3 & SOP distribusi"] },
+        { "program": "Checkpoint Distribusi & Niaga", "ritual": "Checkpoint & FGD lintas distribusi–niaga", "frequency": "Checkpoint berkala", "evidence": "FGD Program Distribusi", "rewardConsequence": ["Apresiasi unit paling andal", "Penyulang gangguan berulang wajib punya PIC & rencana aksi"], "impact": "Gangguan penyulang turun 25,3% (Jan–Sep); SAIDI 108,70% & SAIFI 105,88%", "governance": ["Evaluasi lintas peran", "Tindak lanjut terkoordinasi per PIC unit"] }
+      ],
+      "highlights": [
+        { "letter": "B", "title": "Beyond", "subtitle": "Kinerja Bidang OHSD 100% tercapai", "points": ["Response time 24,18 menit (capaian 118,63%)", "SAIDI 108,70% · SAIFI 105,88%", "Feedback negatif 0,013% (capaian 173,38%)"] },
+        { "letter": "E", "title": "Expectations", "subtitle": "Transaksi PLN Mobile di atas target setahun", "points": ["989.684 transaksi Jan–Sep (209,8% target YTD)", "Rp279,0 M, melewati target setahun Rp278,4 M", "Naik +145% YoY (420.555 vs 171.430 transaksi; basis periode dikonfirmasi)"] },
+        { "letter": "S", "title": "Serving", "subtitle": "Gangguan turun tajam pada 2026", "points": ["Gangguan Jan–Sep −25,3% (5.972 → 4.459)", "Apr–Sep rata-rata 247/bulan vs 732 di 2025 (−66%)", "September 214 vs 862 di 2025"] },
+        { "letter": "T", "title": "Together", "subtitle": "Pelanggan & aset terdata & terpetakan", "points": ["1.468.159 PDL valid · 83,84%", "PDL valid naik dari 32,02% ke 83,84%"] }
+      ]
+    },
+    {
+      "id": "prima",
+      "code": "PLN 3",
+      "name": "Borneo Prima",
+      "focus": "Beyond Growth & Productivity",
+      "tagline": "Growth and Productivity",
+      "taglineSub": "Berdampak, Berdedikasi, Do Extra Miles.",
+      "cover": "assets/pillars/cover-prima.webp",
+      "dnaValues": ["Berdampak", "Berdedikasi", "Do Extra Miles"],
+      "businessTarget": "Penjualan energi > 7,04 TWh",
+      "ultimateTarget": "Produktivitas per pegawai > 10 GWh",
+      "selfReportedProgress": "100% On Track",
+      "keyIndicatorIds": ["penjualan", "produktivitas"],
+      "closingLine": "Kenali Pelanggan, Kuatkan Pemasaran, Tumbuhkan Penjualan!",
+      "closingSub": "Ranger Master & Ranger Leader berperan aktif memastikan tiap tahap berdampak, berdedikasi dan do extra miles.",
+      "kpiFokus": [
+        { "label": "Pertumbuhan penjualan", "targetLabel": "8,82%", "value": null, "source": "Lembar Pencapaian 15 Okt 2026" },
+        { "label": "Produktivitas", "targetLabel": "10,46 GWh/pegawai", "value": 7.88, "source": "Lembar Pencapaian 15 Okt 2026" }
+      ],
+      "officialPrograms": ["Breakdown Rencana Aksi", "Forum Pencapaian", "Penguatan Kompetensi Niaga", "Prospek Pelanggan Baru", "Program Percepatan Pelayanan Pelanggan"],
+      "programs": [
+        { "id": "p", "name": "Profil & Peta Pelanggan", "action": "P", "description": "Profiling dan visualisasi peta pelanggan." },
+        { "id": "r", "name": "Report Penjualan Rutin", "action": "R", "description": "Sales report berkala untuk evaluasi & tindak lanjut.", "indicatorIds": ["penjualan"] },
+        { "id": "i", "name": "Improvement Kompetensi Marketers", "action": "I", "description": "Upskilling tim pemasaran.", "indicatorIds": ["produktivitas"] },
+        { "id": "m", "name": "Maksimalkan Branding", "action": "M", "description": "Marketing kit, banner, flyer, optimalisasi media sosial." },
+        { "id": "a", "name": "Ajang Kompetisi Marketing", "action": "A", "description": "Kompetisi pendorong kreativitas & prestasi." }
+      ],
+      "indicators": [
+        { "id": "penjualan", "label": "Realisasi penjualan energi listrik", "unit": "GWh", "type": "cumulative", "target": 7040, "targetLabel": "7.040 GWh", "targetYtd": { "2026-09": 5222 }, "values": { "2026-06": 3436, "2026-07": 4059, "2026-08": 4699, "2026-09": 5339, "2026-12P": 7015 }, "programIds": ["r"], "source": "Lembar Pencapaian 15 Okt 2026 · Slide System Prima" },
+        { "id": "produktivitas", "label": "Produktivitas pegawai", "unit": "GWh/pegawai", "type": "cumulative", "target": 10.46, "targetLabel": "10,46 GWh/pegawai", "decimals": 2, "values": { "2026-06": 5.04, "2026-07": 6.01, "2026-08": 6.96, "2026-09": 7.88, "2026-12P": 10.36 }, "programIds": ["i"], "source": "Lembar Pencapaian 15 Okt 2026" }
+      ],
+      "gauges": [
+        { "label": "Penjualan tenaga listrik", "unit": "GWh", "target": 5222, "actual": 5339, "basis": "vs target s.d. Sep" },
+        { "label": "Produktivitas per pegawai", "unit": "GWh", "target": 10.46, "actual": 7.88, "basis": "vs target tahunan (Des)" },
+        { "label": "Penambahan pelanggan", "unit": "plg", "target": 64589, "actual": 70343, "basis": "vs target s.d. Sep" },
+        { "label": "Daya tersambung", "unit": "MVA", "target": 208.38, "actual": 229.74, "basis": "vs target s.d. Sep" }
+      ],
+      "crm": {
+        "range": "01 Jan – 16 Okt 2026",
+        "won": { "pct": 68.61, "rupiah": 104.13, "customers": 6085 },
+        "lost": { "pct": 0.31, "rupiah": 0.47, "customers": 12 },
+        "topRevenue": { "unit": "UP3 Balikpapan", "rupiah": 42.96 },
+        "topCustomer": { "unit": "UP3 Samarinda", "customers": 3152 }
+      },
+      "rituals": [],
+      "leaderBehavior": [
+        { "step": "Perencanaan", "description": "Rencana aksi: breakdown target & perencanaan pemasaran berdasarkan potensi unit.", "evidenceIds": ["ev-breakdown-target"] },
+        { "step": "Pelaksanaan", "description": "Probing konsumen & calon pelanggan, penyampaian promo tematik.", "evidenceIds": ["ev-probing"] },
+        { "step": "Monitoring", "description": "Monitoring harian progres penjualan, updating potensi & confidence level.", "evidenceIds": ["ev-media-cetak"] },
+        { "step": "Evaluasi", "description": "Evaluasi bulanan hasil pemasaran tiap unit.", "evidenceIds": ["ev-marketing-award"] }
+      ],
+      "leaderClosing": "Ranger Master & Ranger Leader berperan aktif memastikan tiap tahap berdampak, berdedikasi dan do extra miles.",
+      "cultureDna": [
+        { "id": "berdampak", "name": "Berdampak", "definition": "Memberikan manfaat nyata bagi unit dan pelanggan", "scores": { "2026-08": 4.60, "2026-09": 4.71 }, "behaviors": ["Pekerjaan yang dilakukan memberikan manfaat nyata bagi unit", "Menghasilkan ide perbaikan yang dapat diterapkan", "Berorientasi pada kualitas hasil kerja", "Menyelesaikan pekerjaan sesuai target yang disepakati", "Mengukur hasil pekerjaannya berdasarkan dampak terhadap pelanggan atau bisnis"] },
+        { "id": "berdedikasi", "name": "Berdedikasi", "definition": "Komitmen dan integritas dalam setiap pekerjaan", "scores": { "2026-08": 4.59, "2026-09": 4.72 }, "behaviors": ["Menyelesaikan pekerjaan tepat waktu", "Menunjukkan komitmen terhadap target unit", "Tetap menjaga kualitas meskipun dalam tekanan pekerjaan", "Bersedia membantu penyelesaian pekerjaan tim", "Menjaga integritas dalam setiap pelaksanaan tugas"] },
+        { "id": "do-extra-miles", "name": "Do Extra Miles", "definition": "Melampaui tugas rutin untuk hasil yang lebih besar", "scores": { "2026-08": 4.41, "2026-09": 4.72 }, "behaviors": ["Melakukan pekerjaan di luar tugas rutin untuk kepentingan organisasi", "Secara sukarela membantu unit atau rekan lain", "Mengusulkan inovasi atau improvement tanpa diminta", "Bersedia mengambil tanggung jawab tambahan untuk mencapai target bersama", "Memberikan pelayanan yang melebihi harapan pelanggan atau pemangku kepentingan"] }
+      ],
+      "systems": [
+        { "id": "crm", "name": "Dashboard CRM", "description": "Pipeline prospek, close won/lost, revenue & pelanggan per UP3.", "metrics": [{ "label": "Close Won", "value": "68,61%" }, { "label": "Rentang", "value": "1 Jan–16 Okt 2026" }], "access": "intranet" },
+        { "id": "potensi", "name": "Dashboard Potensi Pelanggan 2026", "description": "Peta potensi pelanggan per ULP & kategori.", "metrics": [{ "label": "Profiling", "value": "367 lokasi" }, { "label": "Aplikasi", "value": "DPLC" }], "access": "intranet" }
+      ],
+      "symbols": [
+        { "program": "Report Penjualan Rutin", "ritual": "Internalisasi / Ritual", "frequency": "Harian via WAG, bulanan via surat", "evidence": "WAG pemasaran, surat ke UP3 tiap bulan", "rewardConsequence": ["Apresiasi unit kinerja tertinggi", "Teguran unit kinerja terbawah"], "impact": "Pola pikir memberi dampak nyata pada kinerja penjualan & berdedikasi melayani konsumen", "governance": ["Surat No. 4916_AGA.04.01_F14000000_2026 tentang Evaluasi & Optimalisasi Penggunaan Aplikasi CRM untuk Kegiatan Pemasaran", "Forum Sinergi Distribusi & Niaga Semesteran"] },
+        { "program": "Marketing Reward", "ritual": "Reward & Consequences", "frequency": "Semesteran", "evidence": "Surat apresiasi marketer terbaik tiap bulan (contoh: sertifikat ULP Tanjung Redeb \"Terbaik 3\")", "rewardConsequence": ["Reward marketer terbaik", "Reward unit kinerja terbaik"], "impact": "Pegawai termotivasi melakukan lebih dari standar (do extra miles)", "governance": ["Penetapan Marketer Terbaik SMT 1 2026", "Penetapan Unit Terbaik SMT 1 2026"] }
+      ],
+      "highlights": [
+        { "letter": "P", "title": "Profil & Peta Pelanggan", "subtitle": "367 lokasi", "points": ["Data profiling pelanggan di aplikasi DPLC"] },
+        { "letter": "R", "title": "Report Penjualan Rutin", "subtitle": "5.339 GWh · 102,24%", "points": ["Realisasi s.d. Sep, target 5.222 GWh"] },
+        { "letter": "I", "title": "Improvement Kompetensi Marketers", "subtitle": "ARUS MAHAKAM", "points": ["Seri I 23–25 Sep", "Seri II 14–16 Okt"] },
+        { "letter": "M", "title": "Maksimalkan Branding", "subtitle": "Media cetak & Instagram", "points": ["Marketing kit, banner, flyer di lokasi strategis"] },
+        { "letter": "A", "title": "Ajang Kompetisi Marketing", "subtitle": "Marketing Award & Rewarding", "points": ["Penghargaan UP3 & ULP di Forum Distribusi Niaga"] }
+      ]
+    }
+  ],
+  "waitingKpis": [
+    { "pillarId": "best", "label": "Indeks Kepuasan Pelanggan", "targetLabel": "≥ 99,50%" },
+    { "pillarId": "best", "label": "Susut distribusi (tanpa Emin)", "targetLabel": "6,15%" },
+    { "pillarId": "prima", "label": "Pertumbuhan penjualan", "targetLabel": "8,82%" }
+  ],
+  "timeline": [
+    { "date": "2026-09-23", "endDate": "2026-09-25", "title": "ARUS MAHAKAM Seri I", "pillarId": "prima" },
+    { "date": "2026-10-13", "title": "Paparan Borneo Prima", "pillarId": "prima" },
+    { "date": "2026-10-14", "title": "Laporan Harian Kinerja HSSE", "pillarId": "bersinar" },
+    { "date": "2026-10-14", "endDate": "2026-10-16", "title": "ARUS MAHAKAM Seri II", "pillarId": "prima" },
+    { "date": "2026-10-15", "title": "Lembar Pencapaian ditandatangani Ranger Master" },
+    { "title": "Kampus Yantek Batch 4 — UP3 Berau", "pillarId": "best", "note": "Tanggal dikonfirmasi" }
+  ],
+  "documents": [
+    { "pillarId": "all", "number": "Lembar Pencapaian Program Budaya 2026", "title": "Business Focus Alignment PLN UID Kaltimra 2026 — ditandatangani Ranger Master", "date": "15 Okt 2026" },
+    { "pillarId": "bersinar", "number": "Surat GM No. 1429/KLH.01.01/F140000/2026", "title": "Himbauan Safety Quote", "date": "2026" },
+    { "pillarId": "bersinar", "number": "Penetapan Reward Program K3L", "title": "Reward Program K3L Tahun 2026", "date": "2026" },
+    { "pillarId": "bersinar", "number": "Laporan Harian Kinerja HSSE", "title": "UID Kaltimra — Rabu, 14 Oktober 2026", "date": "14 Okt 2026" },
+    { "pillarId": "best", "number": "COC VAPE GADIS", "title": "Pembahasan progres 6 UP3", "date": "Rutin" },
+    { "pillarId": "prima", "number": "Surat No. 4916_AGA.04.01_F14000000_2026", "title": "Evaluasi & Optimalisasi Penggunaan Aplikasi CRM untuk Kegiatan Pemasaran", "date": "2026" },
+    { "pillarId": "prima", "number": "Forum Sinergi Distribusi & Niaga", "title": "Forum semesteran", "date": "Semesteran" },
+    { "pillarId": "prima", "number": "Penetapan Marketer & Unit Terbaik", "title": "Semester 1 2026", "date": "2026" },
+    { "pillarId": "prima", "number": "Paparan Borneo Prima", "title": "Program Budaya \"Beyond Growth & Productivity\"", "date": "13 Okt 2026" }
+  ],
+  "evidence": [
+    { "id": "ev-cover-cohub3", "src": "assets/pillars/cover-cohub3.webp", "alt": "Ilustrasi cover Paparan CO HUB 3 PLN UID Kaltimra: tim PLN di depan kota hijau, panel surya, dan turbin angin", "caption": "Paparan CO HUB 3", "pillarId": "all", "lens": "simbol", "unit": "UID Kaltimra", "date": "Okt 2026" },
+    { "id": "ev-cover-bersinar", "src": "assets/pillars/cover-bersinar.webp", "alt": "Poster Borneo Bersinar: peta Kalimantan bercahaya dengan menara transmisi", "caption": "Poster Borneo Bersinar", "pillarId": "bersinar", "lens": "simbol", "unit": "UID Kaltimra", "date": "2026" },
+    { "id": "ev-safety-briefing", "src": "assets/evidence/bersinar/safety-briefing.webp", "alt": "Safety briefing sebelum bekerja", "caption": "Safety Briefing", "pillarId": "bersinar", "lens": "ritual" },
+    { "id": "ev-cctv-bwc", "src": "assets/evidence/bersinar/cctv-bwc.webp", "alt": "Pemantauan CCTV dan body worn camera", "caption": "Supervision CCTV/BWC", "pillarId": "bersinar", "lens": "ritual" },
+    { "id": "ev-inspekta", "src": "assets/evidence/bersinar/inspekta-closing.webp", "alt": "Inspeksi dan closing temuan di aplikasi Inspekta", "caption": "Inspekta & Closing", "pillarId": "bersinar", "lens": "ritual" },
+    { "id": "ev-weekly-review", "src": "assets/evidence/bersinar/weekly-review.webp", "alt": "Rapat review mingguan K3", "caption": "Weekly Safety Review", "pillarId": "bersinar", "lens": "ritual" },
+    { "id": "ev-gelar-apd", "src": "assets/evidence/bersinar/gelar-apd.webp", "alt": "Gelar APD dan alat kerja", "caption": "Gelar APD & Alker", "pillarId": "bersinar", "lens": "ritual" },
+    { "id": "ev-safety-quotes", "src": "assets/evidence/bersinar/safety-quotes.webp", "alt": "Safety quote harian", "caption": "Safety Quotes", "pillarId": "bersinar", "lens": "simbol" },
+    { "id": "ev-sidak", "src": "assets/evidence/bersinar/sidak-manajemen.webp", "alt": "Sidak manajemen di lapangan", "caption": "Sidak Manajemen", "pillarId": "bersinar", "lens": "leader" },
+    { "id": "ev-cover-best", "src": "assets/pillars/cover-best.webp", "alt": "Poster Borneo Best: petir emas di atas peta Kalimantan biru", "caption": "Poster Borneo Best", "pillarId": "best", "lens": "simbol", "unit": "UID Kaltimra", "date": "2026" },
+    { "id": "ev-fgd-distribusi", "src": "assets/evidence/best/fgd-distribusi.webp", "alt": "FGD program distribusi", "caption": "FGD Program Distribusi", "pillarId": "best", "lens": "leader" },
+    { "id": "ev-koordinasi-distribusi", "src": "assets/evidence/best/koordinasi-distribusi.webp", "alt": "Koordinasi tim distribusi", "caption": "Koordinasi Tim Distribusi", "pillarId": "best", "lens": "leader" },
+    { "id": "ev-light-up", "src": "assets/evidence/best/light-up-the-dream.webp", "alt": "Kegiatan Light Up The Dream", "caption": "Light Up The Dream", "pillarId": "best", "lens": "leader" },
+    { "id": "ev-ev-bike", "src": "assets/evidence/best/komunitas-ev-bike.webp", "alt": "Touring bersama komunitas EV Bike Balikpapan", "caption": "Komunitas EV Bike", "pillarId": "best", "lens": "ritual", "unit": "Balikpapan" },
+    { "id": "ev-coc-vape", "src": "assets/evidence/best/coc-vape-gadis.webp", "alt": "COC VAPE GADIS", "caption": "COC VAPE GADIS", "pillarId": "best", "lens": "sistem" },
+    { "id": "ev-kampus-yantek", "src": "assets/evidence/best/kampus-yantek-batch4.webp", "alt": "Kampus Yantek Batch 4 di UP3 Berau", "caption": "Kampus Yantek Batch 4", "pillarId": "best", "lens": "ritual", "unit": "UP3 Berau" },
+    { "id": "ev-cover-prima", "src": "assets/pillars/cover-prima.webp", "alt": "Poster Borneo Prima: peta Kalimantan hijau dengan garis energi emas", "caption": "Poster Borneo Prima", "pillarId": "prima", "lens": "simbol", "unit": "UID Kaltimra", "date": "2026" },
+    { "id": "ev-breakdown-target", "src": "assets/evidence/prima/breakdown-target.webp", "alt": "Breakdown target penjualan", "caption": "Breakdown Target", "pillarId": "prima", "lens": "leader" },
+    { "id": "ev-probing", "src": "assets/evidence/prima/probing-konsumen.webp", "alt": "Probing konsumen dan calon pelanggan", "caption": "Probing Konsumen", "pillarId": "prima", "lens": "leader" },
+    { "id": "ev-arus-mahakam", "src": "assets/evidence/prima/arus-mahakam.webp", "alt": "Pelatihan ARUS MAHAKAM", "caption": "ARUS MAHAKAM", "pillarId": "prima", "lens": "ritual", "date": "Sep–Okt 2026" },
+    { "id": "ev-media-cetak", "src": "assets/evidence/prima/media-cetak.webp", "alt": "Media cetak dan branding di lokasi strategis", "caption": "Media Cetak & Instagram", "pillarId": "prima", "lens": "simbol" },
+    { "id": "ev-marketing-award", "src": "assets/evidence/prima/marketing-award-gold.webp", "alt": "Marketing Award", "caption": "Marketing Award", "pillarId": "prima", "lens": "simbol" }
+  ]
+}

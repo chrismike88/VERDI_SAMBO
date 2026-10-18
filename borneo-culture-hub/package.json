@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "BORNEO Culture Hub — landing page monitoring Program Budaya PLN 1·2·3 PLN UID Kaltimra 2026",
+  "description": "BORNEO Culture Hub \u2014 landing page monitoring Program Budaya PLN 1\u00b72\u00b73 PLN UID Kaltimra 2026",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -38,5 +38,8 @@
     "vite": "^8.3.4",
     "vite-plugin-singlefile": "^2.3.4",
     "vitest": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=20.19"
   }
 }

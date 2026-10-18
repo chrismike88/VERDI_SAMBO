@@ -42,7 +42,8 @@ Peta Kalimantan dibuat dari GeoJSON batas provinsi (Dukcapil 2019) yang disederh
 ## Deploy
 
 - **Server intranet (disarankan):** salin isi `dist/` ke Nginx/IIS. Path relatif, jadi bisa di subfolder.
-- **Vercel/Netlify:** deploy `dist/` dan aktifkan proteksi password.
+- **Vercel (project `borneo`):** konfigurasi sudah ada di `vercel.json`. Di vercel.com → *Add New → Project* → impor repo `chrismike88/VERDI_SAMBO` → nama project `borneo` → **Root Directory: `borneo-culture-hub`** → *Deploy*. Setiap push berikutnya otomatis ter-deploy. Aktifkan *Settings → Deployment Protection* bila halaman tidak boleh terbuka untuk umum.
+- **Netlify:** deploy `dist/` dan aktifkan proteksi password.
 - **Offline:** buka `dist-single/index.html` langsung dari laptop.
 
 Halaman memakai `noindex` dan `robots.txt` disallow, tanpa tracker dan tanpa URL/IP internal. Untuk penggunaan internal PLN.
